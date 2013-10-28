@@ -7,6 +7,10 @@ class ProductsController < ApplicationController
       format.json {render :json => @products}
     end
   end
+  
+  def new
+    @product = Product.new
+  end
 
   def create
     @product = Product.new(params[:product])
